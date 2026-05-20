@@ -1,36 +1,36 @@
 SSH Brute Force Detection & Prevention on Cloud VPS
 
-📌 Overview
+ Overview
 
 This project demonstrates how to detect and prevent SSH brute-force attacks on a cloud-hosted Ubuntu server using Fail2Ban.
 
-🧠 Objective
+ Objective
 
 To simulate real-world attack scenarios and implement automated defense mechanisms based on system log analysis.
 
 ---
 
-🏗️ Architecture
+ Architecture
 
 Internet → Ubuntu VM (Azure) → SSH Logs → Fail2Ban → Firewall Block
 
 ---
 
-⚙️ Technologies Used
+ Technologies Used
 
-- Ubuntu 24.04 (Azure VM)
-- Fail2Ban
-- SSH
-- Linux system logs
+ Ubuntu 24.04 (Azure VM)
+ Fail2Ban
+ SSH
+ Linux system logs
 
 ---
 
-🚀 Implementation
+ Implementation
 
 1. Server Setup
 
-- Deployed Ubuntu VM on Azure
-- Connected via SSH
+ Deployed Ubuntu VM on Azure
+ Connected via SSH
 
 2. Install Fail2Ban
 
@@ -55,19 +55,19 @@ sudo fail2ban-client status
 
 ---
 
-🔍 Testing
+ Testing
 
-- Simulated brute-force attempts using repeated SSH login failures
-- Monitored logs:
+ Simulated brute-force attempts using repeated SSH login failures
+ Monitored logs:
 
 sudo tail -f /var/log/auth.log
 
 ---
 
-🚨 Results
+ Results
 
-- Multiple failed login attempts detected
-- Fail2Ban automatically blocked attacker IP
+ Multiple failed login attempts detected
+Fail2Ban automatically blocked attacker IP
 
 Example:
 
@@ -75,23 +75,23 @@ Banned IP: 2.57.122.238
 
 ---
 
-📊 Key Findings
+ Key Findings
 
-- Public servers are continuously scanned by bots
-- SSH is a primary attack vector
-- Automated protection significantly reduces risk
-
----
-
-🔮 Future Improvements
-
-- Integrate with SIEM (e.g., Sentinel)
-- Add alerting system
-- Visualize logs using ELK/Grafana
-- Implement SSH key authentication
+ Public servers are continuously scanned by bots
+ SSH is a primary attack vector
+ Automated protection significantly reduces risk
 
 ---
 
-🧾 Conclusion
+ Future Improvements
+
+ Integrate with SIEM (e.g., Sentinel)
+ Add alerting system
+ Visualize logs using ELK/Grafana
+ Implement SSH key authentication
+
+---
+
+ Conclusion
 
 This project demonstrates a practical approach to detecting and mitigating brute-force attacks in a real cloud environment using log-based security tools.
